@@ -1,0 +1,59 @@
+@import "../../../global.scss";
+
+.galleryContainer{
+    background-image: none;
+    background-color: white;
+    background-size: cover;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;    
+    height: 100%;
+    
+    .titleContainer{
+        text-align: left;
+        width: 60%;
+        .title{
+            letter-spacing: 10px;
+            font-size: 50px;
+            color: black;
+            padding: 24px 14px 16px 24px;
+        }
+    }
+
+    .imageContainer{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        @include mobile{
+            margin-top: 100px;
+            
+        }
+        
+        .item{
+            margin: 0px 20px;
+            @include mobile{
+                width:50%;
+                
+            }
+
+            &:hover{
+                transition: all 0.4s ease-in-out;
+                transform: scale(1.05, 1.05);
+                cursor: pointer;
+
+                h1{
+                    opacity: 0;
+                    transition: all 0.5s ease-out;
+                }
+            }
+            img{
+                width: 260px;
+                height: auto;
+            }
+        }
+        
+    }
+}
